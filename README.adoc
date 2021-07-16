@@ -1,0 +1,44 @@
+== wifivi
+
+A POSIX-shell script to visualize channels used by nearby wireless networks.
+It makes it easier to see which channels are free or least used when selecting
+a channel for an access point. It uses the `iw scan` command, or it can read
+the output of this command from standard input if `-` is specified as a device.
+
+=== Example
+
+----
+# wifivi wlan0
+           SSID  Ch  Bw dBm    1    6    11     36  52  100 116 132  149 165
+                               .    .    .      .   .    .   .   .    .   .
+         ATT408  13  20 -39 |            ***** |        |            |        |
+         Marina 116  40 -48 |                  |        |    **      |        |
+      NETGEAR43 108  80 -49 |                  |        |****        |        |
+       MikroTik  11  20 -50 |          *****   |        |            |        |
+FRITZ!Box 6360    9  40 -51 |        ********* |        |            |        |
+         ATT752 116  40 -56 |                  |        |    **      |        |
+        Michael  13  40 -58 |        ********* |        |            |        |
+         ATT712   5  40 -60 |    *********     |        |            |        |
+      FRITZ!Box   4  20 -66 |   *****          |        |            |        |
+FON_FREE_INTERN  52  80 -67 |                  |    ****|            |        |
+        O2 WIFI  12  40 -75 |       *********  |        |            |        |
+          orion 144  20 -76 |                  |        |           *|        |
+logitecgameuser   6  20 -77 |     *****        |        |            |        |
+      NETGEAR71  64  80 -79 |                  |    ****|            |        |
+           doma   1  40 -79 |*********         |        |            |        |
+TWCWiFi-Passpoi  44  80 -79 |                  |****    |            |        |
+        Draytek 136  40 -79 |                  |        |        **  |        |
+         martin   9  40 -80 |        ********* |        |            |        |
+        O2 WIFI   8  40 -80 |   *********      |        |            |        |
+           IPAD  11  20 -83 |          *****   |        |            |        |
+       MEO-WIFI   1  40 -83 |*********         |        |            |        |
+         ATT544   1  40 -83 |*********         |        |            |        |
+      Netgear88  11  40 -83 |      *********   |        |            |        |
+        Anygate   6  20 -83 |     *****        |        |            |        |
+           MINE   3  20 -83 |  *****           |        |            |        |
+         belkin   1  20 -83 |*****             |        |            |        |
+         VICTOR   6  20 -83 |     *****        |        |            |        |
+          LWL-M   6  20 -83 |     *****        |        |            |        |
+          cWiFi  13  40 -83 |        ********* |        |            |        |
+         U+zone  11  20 -83 |          *****   |        |            |        |
+----
